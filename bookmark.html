@@ -1,0 +1,237 @@
+﻿<!doctype html>
+<html class=" " lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>书签-木庄网络博客</title>
+    <meta http-equiv="windows-Target " content="_top ">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/nprogress.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/nprogress.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <!--[if gte IE 9]>
+      <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+      <script src="js/html5shiv.min.js" type="text/javascript"></script>
+      <script src="js/respond.min.js" type="text/javascript"></script>
+      <script src="js/selectivizr-min.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script>window.location.href='upgrade-browser.html';</script>
+    <![endif]-->
+    <link rel="shortcut icon" href="http://www.muzhuangnet.com/favicon.ico">
+</head>
+<body class="user-select">
+    <header class="header">
+        <nav class="navbar navbar-default" id="navbar">
+            <div class="container">
+                <div class="header-topbar hidden-xs link-border">
+                    <ul class="site-nav topmenu">
+                        <li><a href="http://www.muzhuangnet.com/myinfo.html" rel="nofollow" draggable="false">博主简介</a></li>
+                        <li><a href="http://www.muzhuangnet.com/tags/" draggable="false">标签云</a></li>
+                        <li><a href="http://www.muzhuangnet.com/bookmark/" rel="nofollow" draggable="false">书签</a></li>
+                        <li><a href="http://www.muzhuangnet.com/readers/" rel="nofollow" draggable="false">读者墙</a></li>
+                        <li>
+                            <a href="http://www.muzhuangnet.com/rss.html" title="RSS订阅" rel="nofollow" draggable="false">
+                                <i class="fa fa-rss">
+                                </i> RSS订阅
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="register" draggable="false">勤记录 懂分享</a>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar" aria-expanded="false"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <h1 class="logo hvr-bounce-in">
+                        <a href="http://www.muzhuangnet.com" title="木庄网络博客" draggable="false">
+                            <img src="http://www.muzhuangnet.com/upload/201610/17/201610171329086541.png" alt="木庄网络博客" draggable="false">
+                        </a>
+                    </h1>
+                </div>
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <form class="navbar-form visible-xs">
+                        <div class="input-group">
+                            <input type="text" class="form-control" onkeydown="if (event.keyCode == 13) {SiteSearch('http://www.muzhuangnet.com/search.html', '#keyword');return false};" size="35" placeholder="请输入关键字" id="keyword" name="keyword" maxlength="15" autocomplete="off">
+                            <span class="input-group-btn">
+                                <input type="button" value="搜索" onclick="SiteSearch('http://www.muzhuangnet.com/search.html', '#keyword');" class="btn btn-default btn-search">
+                            </span>
+                        </div>
+
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="index">
+                            <a data-cont="木庄网络博客" title="木庄网络博客" href="http://www.muzhuangnet.com" draggable="false">
+                                首页
+                            </a>
+                        </li>
+
+                        <li id="mznetblog"><a data-cont="MZBlog开源博客" title="MZBlog开源博客" href="http://www.muzhuangnet.com/list/mznetblog/" draggable="false">MZBlog开源博客</a></li>
+
+                        <li id="code"><a data-cont="IT技术笔记" title="IT技术笔记" href="http://www.muzhuangnet.com/list/code/" draggable="false">IT技术笔记</a></li>
+
+                        <li id="sharing"><a data-cont="其他分享" title="其他分享" href="http://www.muzhuangnet.com/list/sharing/" draggable="false">其他分享</a></li>
+
+                        <li id="manual"><a data-cont="HTML教程" title="HTML教程" href="http://www.muzhuangnet.com/manual/html/" draggable="false">编程手册</a></li>
+                        <script type="text/javascript">
+                            $(function () {
+                                var flag = $("#header-navbar").attr("name");
+                                $("#" + flag).addClass("active");
+                            })
+                        </script>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container container-page">
+        <div class="pageside">
+            <div class="pagemenus">
+                <ul class="pagemenu">
+                    <li><a href="http://www.muzhuangnet.com/tags/" title="标签云" draggable="false">标签云</a></li>
+                    <li><a href="http://www.muzhuangnet.com/bookmark/" rel="nofollow" title="书签" draggable="false">书签</a></li>
+                    <li><a href="http://www.muzhuangnet.com/readers/" rel="nofollow" title="读者墙" draggable="false">读者墙</a></li>
+
+                    <li><a title="MZBlog开源博客" href="http://www.muzhuangnet.com/list/mznetblog/" draggable="false">MZBlog开源博客</a></li>
+
+                    <li><a title="IT技术笔记" href="http://www.muzhuangnet.com/list/code/" draggable="false">IT技术笔记</a></li>
+
+                    <li><a title="其他分享" href="http://www.muzhuangnet.com/list/sharing/" draggable="false">其他分享</a></li>
+
+                    <li><a href="http://www.muzhuangnet.com/manual/html/" title="编程手册" draggable="false">编程手册</a></li>
+                    <li><a href="http://www.muzhuangnet.com/myinfo.html" rel="nofollow" draggable="false">博主简介</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <header class="article-header">
+                <h1 class="article-title">书签</h1>
+            </header>
+            <div class="readers">
+
+                <a class="item-readers item-readers-1" target="_blank" title="openwrite" href="https://my.openwrite.cn/user/channel" rel="nofollow" draggable="false">
+                    <h4>openwrite</h4>https://my.openwrite.cn/user/channel
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="思否" href="https://segmentfault.com/u/muzhuangnet" rel="nofollow" draggable="false">
+                    <h4>思否</h4>https://segmentfault.com/u/muzhuangnet
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="CSDN" href="https://blog.csdn.net/lhp993356686" rel="nofollow" draggable="false">
+                    <h4>CSDN</h4>https://blog.csdn.net/lhp993356686
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="掘金" href="https://juejin.im/user/5d9fd3dc51882509751b198f" rel="nofollow" draggable="false">
+                    <h4>掘金</h4>https://juejin.im/user/5d9fd3dc51882509751b198f
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="博客园" href="http://www.cnblogs.com/muzhuang/" rel="nofollow" draggable="false">
+                    <h4>博客园</h4>http://www.cnblogs.com/muzhuang/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="简书" href="https://www.jianshu.com/u/119a397f699f" rel="nofollow" draggable="false">
+                    <h4>简书</h4>https://www.jianshu.com/u/119a397f699f
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="开源中国" href="https://my.oschina.net/muzhuang" rel="nofollow" draggable="false">
+                    <h4>开源中国</h4>https://my.oschina.net/muzhuang
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="Spring For All" href="http://www.spring4all.com" rel="nofollow" draggable="false">
+                    <h4>Spring For All</h4>http://www.spring4all.com
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="极术社区" href="https://aijishu.com/u/muzhuang" rel="nofollow" draggable="false">
+                    <h4>极术社区</h4>https://aijishu.com/u/muzhuang
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="头条号" href="http://www.toutiao.com/c/user/51558101877/#mid=51558101877" rel="nofollow" draggable="false">
+                    <h4>头条号</h4>http://www.toutiao.com/c/user/51558101877/#mid=51558101877
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="慕课手记" href="https://www.imooc.com/u/8249251/articles" rel="nofollow" draggable="false">
+                    <h4>慕课手记</h4>https://www.imooc.com/u/8249251/articles
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="网易号" href="http://dy.163.com/v2/article/detail/ES6JN9BM0511BVK1.html" rel="nofollow" draggable="false">
+                    <h4>网易号</h4>http://dy.163.com/v2/article/detail/ES6JN9BM0511BVK1.html
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="Lofter" href="http://muzhuangnet.lofter.com/" rel="nofollow" draggable="false">
+                    <h4>Lofter</h4>http://muzhuangnet.lofter.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="百度百家号" href="https://baijiahao.baidu.com/u?app_id=1550305684319887" rel="nofollow" draggable="false">
+                    <h4>百度百家号</h4>https://baijiahao.baidu.com/u?app_id=1550305684319887
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="知乎" href="https://www.zhihu.com/people/muzhuang/posts" rel="nofollow" draggable="false">
+                    <h4>知乎</h4>https://www.zhihu.com/people/muzhuang/posts
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="站长之家" href="http://www.chinaz.com/" rel="nofollow" draggable="false">
+                    <h4>站长之家</h4>http://www.chinaz.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="百度统计" href="http://tongji.baidu.com/" rel="nofollow" draggable="false">
+                    <h4>百度统计</h4>http://tongji.baidu.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="百度站长" href="http://zhanzhang.baidu.com/" rel="nofollow" draggable="false">
+                    <h4>百度站长</h4>http://zhanzhang.baidu.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="站酷海洛" href="http://www.hellorf.com/" rel="nofollow" draggable="false">
+                    <h4>站酷海洛</h4>http://www.hellorf.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="图虫网" href="https://tuchong.com/" rel="nofollow" draggable="false">
+                    <h4>图虫网</h4>https://tuchong.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="全景图库" href="http://www.quanjing.com/" rel="nofollow" draggable="false">
+                    <h4>全景图库</h4>http://www.quanjing.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="123RF" href="http://www.123rf.net/contributor/" rel="nofollow" draggable="false">
+                    <h4>123RF</h4>http://www.123rf.net/contributor/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="汇图网" href="http://www.huitu.com/" rel="nofollow" draggable="false">
+                    <h4>汇图网</h4>http://www.huitu.com/
+                </a>
+
+                <a class="item-readers item-readers-1" target="_blank" title="壹图网" href="http://www.1tu.com/" rel="nofollow" draggable="false">
+                    <h4>壹图网</h4>http://www.1tu.com/
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>本站[<a href="http://www.muzhuangnet.com/" draggable="false">木庄网络博客</a>]的部分内容来源于网络，若侵犯到您的利益，请联系站长删除！谢谢！Powered By [<a href="http://www.dtcms.net/" target="_blank" rel="nofollow" draggable="false">DTcms</a>] Version 4.0&nbsp;&nbsp;
+            </p>
+        </div>
+        <div id="gotop" style="display: none;"><a class="gotop" draggable="false"></a></div>
+    </footer>
+    <div id="rightClickMenu">
+        <ul class="list-group rightClickMenuList">
+            <li class="list-group-item disabled">欢迎访问木庄网络博客</li>
+            <li class="list-group-item disabled"><span>可复制：</span>代码框内的文字。</li>
+            <li class="list-group-item disabled"><span>方法：</span>Ctrl+C。</li>
+        </ul>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.ias.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+
+</body>
+</html>
